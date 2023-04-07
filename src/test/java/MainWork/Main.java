@@ -32,4 +32,11 @@ public class Main {
             System.out.println("User is logged in successfully");
         }
     }
+    @Then("user is logged in successfully")
+    public void user() {
+        boolean userloggedIn=driver.findElement(By.xpath("//a[@id='welcome']")).isDisplayed();
+        if (userloggedIn){
+            System.out.println("User is logged in successfully");
+        }
+    }
 }

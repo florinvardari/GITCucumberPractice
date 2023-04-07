@@ -2,8 +2,10 @@ package TeamLead;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TeamLeadWork {
@@ -20,5 +22,11 @@ public class TeamLeadWork {
         if (userloggedIn){
             System.out.println("User is logged in successfully");
         }
+    }
+    @When("click on login button")
+    public void click_on_login_button() {
+
+        WebElement loginBtn=driver.findElement(By.id("btnLogin"));
+
     }
 }
