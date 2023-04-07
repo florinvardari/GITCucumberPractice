@@ -32,4 +32,9 @@ public class Main {
             System.out.println("User is logged in successfully");
         }
     }
+    @When("user enters valid email and valid password")
+    public void user_enters_valid_emai() {
+        driver.findElement(By.id("txtUsername")).sendKeys("admin");
+        driver.findElement(By.id("txtPassword")).sendKeys("Hum@nhrm123");
+    }
 }

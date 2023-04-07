@@ -1,5 +1,6 @@
 package FlorinCode;
 
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,5 +18,12 @@ public class EnterUser {
 
         WebElement loginBtn=driver.findElement(By.id("btnLogin"));
 
+    }
+    @Then("user is logged in successfully")
+    public void user_is_logged_in_successfully() {
+        boolean userloggedIn=driver.findElement(By.xpath("//a[@id='welcome']")).isDisplayed();
+        if (userloggedIn){
+            System.out.println("User is logged in successfully");
+        }
     }
 }
